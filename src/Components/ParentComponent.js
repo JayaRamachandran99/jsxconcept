@@ -1,20 +1,16 @@
 import React from 'react';
-import ChildComponentA from './ChildComponentA';
-import ChildComponentB from './ChildComponentB';
+import ChildComponent from './ChildComponent';
 
-const ParentComponent = () => {
-  const name = 'John Doe';
-
-  const handleClick = () => {
-    console.log('Button clicked!');
-  };
+function ParentComponent() {
+  const dataToPass = "Hello from Parent Component";
 
   return (
     <div>
-      <ChildComponentA name={name} onClick={handleClick} />
-      <ChildComponentB name={name} />
+      <h1>Parent Component</h1>
+      {/* Pass the data as a prop to the ChildComponent */}
+      <ChildComponent data={dataToPass} />
     </div>
   );
-};
+}
 
 export default ParentComponent;
